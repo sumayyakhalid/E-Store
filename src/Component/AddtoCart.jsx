@@ -89,7 +89,9 @@ function AddtoCart()  {
               if (originalItem >= 0) {
                 const newArray = [...add.slice(0, originalItem), ...add.slice(originalItem + 1)];
                 setAdd(newArray);
-                a.set_addcart(a.add_cart -1);  // Ensures it doesn't go below 0
+              if(a.add_cart>0){
+                a.set_addcart(a.add_cart -1); 
+               } // Ensures it doesn't go below 0
 
              
               }
